@@ -1,5 +1,5 @@
 # Interview_1_O_1
-This repository have questions for interviews
+This repository has questions for interviews
 
 ## Machine Learning Interview Questions
 

@@ -34,7 +34,7 @@ Examples: YOLO/Faster R-CNN for detection; U-Net/DeepLab for segmentation.
 - Each cell predicts B bounding boxes and confidence scores
 - Simultaneously predicts class probabilities
 - Single forward pass for detection (real-time capable)
-Advantages: Fast inference, global context understanding. Versions: YOLOv1 through YOLOv8 with progressive improvements.
+Advantages: Fast inference, global context understanding. Multiple versions continue to improve on the architecture.
 
 ### 4. Explain data augmentation for computer vision.
 **Answer:** Data augmentation artificially expands training data:

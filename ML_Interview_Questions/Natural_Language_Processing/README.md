@@ -28,7 +28,7 @@ This folder contains interview questions focused on Natural Language Processing 
 ### 3. What is TF-IDF and how does it work?
 **Answer:** TF-IDF (Term Frequency-Inverse Document Frequency) is a statistical measure of word importance:
 - **TF**: How often a term appears in a document
-- **IDF**: log(N / df), where N is total documents and df is documents containing the term
+- **IDF**: log(N / df), where N is the total number of documents and df is the number of documents containing the term
 - **TF-IDF = TF × IDF**: High for words frequent in a document but rare across corpus
 Used for document representation, keyword extraction, and information retrieval.
 
