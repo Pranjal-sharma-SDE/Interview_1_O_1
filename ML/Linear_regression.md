@@ -19,19 +19,15 @@
 - Coefficient of Determination : Measures the proportion of the variance in the dependent variable that is predictable from the independent variables.
 - Root Mean Squared Error (RMSE): Provides the standard deviation of the residuals, effectively measuring the average size of the error in the forecasted values. 
 
-
-
-2. Can you explain the diffrence b/w simple linear regression and multiple linear regression?
-   > Below is an **interview-ready explanation** that is **slightly detailed**, crisp, and structured—ideal for technical + ML interviews.
-
 ---
 
+2. Can you explain the diffrence b/w simple linear regression and multiple linear regression?
+   > 
 ## Difference Between Simple Linear Regression and Multiple Linear Regression
 
 **Simple Linear Regression (SLR)** is used when we want to model the relationship between **one independent variable** and **one dependent variable**.
 **Multiple Linear Regression (MLR)** is an extension of SLR where the dependent variable is influenced by **two or more independent variables**.
 
----
 
 ### 1. Mathematical Formulation
 
@@ -50,7 +46,6 @@ y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n + \varepsilon
 
 * Each coefficient (\beta_i) measures the **independent effect** of (x_i) on (y), assuming other variables are constant
 
----
 
 ### 2. Conceptual Difference
 
@@ -62,8 +57,6 @@ Example:
 * SLR: Predict house price using **only area**
 * MLR: Predict house price using **area, location, number of rooms, and age of house**
 
----
-
 ### 3. Complexity and Interpretation
 
 | Aspect             | Simple Linear Regression | Multiple Linear Regression |
@@ -74,7 +67,6 @@ Example:
 | Visualization      | Straight line            | Plane / hyperplane         |
 | Predictive power   | Limited                  | Higher                     |
 
----
 
 ### 4. Practical Considerations
 
@@ -96,7 +88,6 @@ However, MLR introduces challenges such as:
 * **Overfitting** if too many variables are used
 * Need for **feature selection and regularization**
 
----
 
 ### 5. Assumptions (Interview Highlight)
 
@@ -109,10 +100,138 @@ Both models assume:
 
 Additionally, **MLR requires low multicollinearity** among predictors.
 
----
 
 ### 6. Interview Closing Statement
 
 > *Simple Linear Regression models the effect of a single variable on a target, making it easy to interpret, whereas Multiple Linear Regression incorporates multiple predictors to capture complex real-world relationships with higher predictive accuracy.*
+
+---
+3. What assumptions are made in linear regression modeling?
+
+## Assumptions in Linear Regression Modeling
+
+Linear regression relies on several statistical assumptions to ensure that the model is **valid, unbiased, and interpretable**.
+
+### 1. Linearity
+
+**Assumption:**
+The relationship between the independent variables and the dependent variable is **linear**.
+
+**Meaning:**
+A change in the predictor leads to a proportional change in the target.
+
+**Violation impact:**
+Non-linear patterns lead to biased predictions.
+
+**How to check:**
+
+* Scatter plots
+* Residuals vs. predicted values
+
+### 2. Independence of Errors
+
+**Assumption:**
+Residuals (errors) are **independent** of each other.
+
+**Meaning:**
+One observation’s error does not influence another’s.
+
+**Violation impact:**
+Common in time-series data → misleading confidence intervals.
+
+**How to check:**
+
+* Durbin–Watson test
+* Residual plots over time
+
+### 3. Homoscedasticity (Constant Variance)
+
+**Assumption:**
+Residuals have **constant variance** across all levels of the independent variables.
+
+**Meaning:**
+Prediction errors are evenly spread.
+
+**Violation impact:**
+Heteroscedasticity leads to unreliable standard errors.
+
+**How to check:**
+
+* Residuals vs. fitted values plot
+
+
+### 4. Normality of Residuals
+
+**Assumption:**
+Residuals are **normally distributed**.
+
+**Meaning:**
+Important for hypothesis testing and confidence intervals, not strictly for prediction.
+
+**Violation impact:**
+Affects statistical inference, not model accuracy.
+
+**How to check:**
+
+* Q–Q plot
+* Histogram of residuals
+
+---
+
+### 5. No Multicollinearity (Mainly for Multiple Regression)
+
+**Assumption:**
+Independent variables are **not highly correlated** with each other.
+
+**Meaning:**
+Each predictor should contribute unique information.
+
+**Violation impact:**
+Unstable coefficients and poor interpretability.
+
+**How to check:**
+
+* Variance Inflation Factor (VIF)
+* Correlation matrix
+
+---
+
+### 6. No Autocorrelation (Especially in Time Series)
+
+**Assumption:**
+Residuals are not correlated across observations.
+
+**Meaning:**
+Past errors should not predict future errors.
+
+**Violation impact:**
+Underestimated standard errors.
+
+**How to check:**
+
+* Durbin–Watson statistic
+
+---
+
+### 7. No Significant Outliers or Influential Points
+
+**Assumption:**
+No extreme data points dominate the model.
+
+**Meaning:**
+Outliers can disproportionately affect the regression line.
+
+**Violation impact:**
+Biased coefficients.
+
+**How to check:**
+
+* Cook’s distance
+* Leverage plots
+
+## Quick Interview Summary (High-Impact)
+
+> *Linear regression assumes linearity, independence, homoscedasticity, normality of residuals, no multicollinearity, and absence of strong outliers to ensure unbiased and interpretable results.*
+
 
 
