@@ -76,3 +76,60 @@ else:
 finally:
     print("Inside finally")
 ```
+
+## Q-5 Which blocks will execute?
+```
+try:
+    x = 10 / 2
+    print("Try block executed")
+except ZeroDivisionError:
+    print("Exception caught")
+else:
+    print("Else block executed")
+finally:
+    print("Finally block executed")
+```
+Ans - 
+Try block executed
+Else block executed
+Finally block executed
+
+## Q-6 Which blocks will execute?
+```
+try:
+    x = 10 / 0
+    print("Try block executed")
+except ZeroDivisionError:
+    print("Zero division error caught")
+else:
+    print("Else block executed")
+finally:
+    print("Finally block executed")
+```
+Ans- 
+Zero division error caught
+Finally block executed
+
+## Q-7 
+```
+try:
+    print("Inside try")
+    raise ValueError("Custom error")
+except ValueError:
+    print("Inside except")
+else:
+    print("Inside else")
+finally:
+    print("Inside finally")
+```
+Ans- Inside try → Custom error → Inside except → Final.
+
+## Q-8 Explain the difference between a mutable and immutable object.
+Ans- Let’s look at the difference between mutable and immutable objects.
+
+Key Distinctions
+**Mutable Objects**: Can be modified after creation.
+**Immutable Objects**: Cannot be modified after creation.
+Common Examples
+**Mutable**: Lists, Sets, Dictionaries
+**Immutable**: Tuples, Strings, Numbers
